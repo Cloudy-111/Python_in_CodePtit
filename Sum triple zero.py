@@ -1,7 +1,7 @@
 def countTriple(arr):
     res = 0
     n = len(arr)
-    for i in range(n-2):
+    for i in range(n-2):  # kĩ thuật 2 con trỏ để giảm xuống O(n^2)
         left = i+1
         right = n-1
 
