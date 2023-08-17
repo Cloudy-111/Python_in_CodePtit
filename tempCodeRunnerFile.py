@@ -1,3 +1,3 @@
-tmp = str(i)
-        # if len(tmp) % 2 and valid(tmp) and Palin(tmp):
-        #     print(i, sep=' ')
+a = [0 for _ in range(10000001)]
+for i in range(1, 10000001):
+    a[i] = phannt(i)
