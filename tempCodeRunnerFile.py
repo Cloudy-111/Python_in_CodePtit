@@ -1,3 +1,8 @@
-a = [0 for _ in range(10000001)]
-for i in range(1, 10000001):
-    a[i] = phannt(i)
+t = int(input())
+# while t > 0:
+#     n = int(input())
+#     for i in range(22, len(a)):
+#         if a[i] <= n:
+#             print(a[i], end=' ')
+#     print()
+#     t -= 1
