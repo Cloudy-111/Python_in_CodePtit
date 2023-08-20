@@ -1,8 +1,12 @@
-t = int(input())
-# while t > 0:
-#     n = int(input())
-#     for i in range(22, len(a)):
-#         if a[i] <= n:
-#             print(a[i], end=' ')
-#     print()
-#     t -= 1
+def loop(n, k, i):
+    for j in range(a[i-1]+1, n-k+i+1):
+        a[i] = j
+        if i == k:
+            for i in range(1, k+1):
+                print(arr[a[i] - 1], end=' ')
+            print()
+        else:
+            loop(n, k, i+1)
+
+
+loop(n, k, 1)
