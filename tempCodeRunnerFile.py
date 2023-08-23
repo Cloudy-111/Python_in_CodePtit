@@ -1,12 +1,9 @@
-def loop(n, k, i):
-    for j in range(a[i-1]+1, n-k+i+1):
-        a[i] = j
-        if i == k:
-            for i in range(1, k+1):
-                print(arr[a[i] - 1], end=' ')
-            print()
-        else:
-            loop(n, k, i+1)
-
-
-loop(n, k, 1)
+N = 10**7 + 1
+# prime = [1]*(N)
+# prime[0] = prime[1] = 0
+# i = 2
+# while i*i < 10**7+1:
+#     if prime[i] == 1:
+#         for j in range(i*i, N, i):
+#             if prime[j] == 1:
+#                 prime[j] = 0
