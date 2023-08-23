@@ -1,6 +1,6 @@
 import math
 import sys
-N = 10**2 + 1
+N = 10**6 + 1
 prime = [1]*(N)
 prime[0] = prime[1] = 0
 i = 2
