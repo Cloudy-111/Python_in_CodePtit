@@ -16,7 +16,7 @@ def check(s):
     b = s.split()
     while '*' in b:
         for i in range(len(b)):
-            if b[i] == '*':
+            if b[i] == '*':  # những chỗ là dấu nhân thì thực hiện trước rồi thay vào vị trí đó
                 tmp = int(b[i - 1]) * int(b[i + 1])
                 idx = i
                 break
@@ -33,7 +33,7 @@ def check(s):
     return res
 
 
-def change(s):
+def change(s):  # thêm dấu ngoặc cho số âm
     res = ''
     for i in s.split():
         if i[0] == '-' and len(i) > 1:
