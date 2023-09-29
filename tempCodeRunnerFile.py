@@ -1,5 +1,3 @@
-4 4 3
-2 1 0 0
-3 2 1 1
-4 5 2 1
-2 2 9 0
+for i in range(n):
+#     for j in range(i + 1, n):
+#         tmp =
