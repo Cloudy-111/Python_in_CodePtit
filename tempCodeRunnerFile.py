@@ -1,4 +1,5 @@
-Chuong trinh Dao Tao CLC nganh CNTT duoc Thiet     Ke theo chuan quoc te.
-# co 03 chuyen nganh la: Cong  nghe phan mem, Tri tue nhan tao va An toan thong tin
-# muc tieu cua chuong trinh la trang bi cho sinh vien cac ky nang nghe nghiep
-# moi    CAC BAN danG ky     thaM giA !
+4 4 3
+2 1 0 0
+3 2 1 1
+4 5 2 1
+2 2 9 0
