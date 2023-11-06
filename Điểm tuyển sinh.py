@@ -2,60 +2,50 @@ idx = 1
 
 
 class Student:
-    id = 'TS'
-
-    def __init__(self, name, res, ethnic, area):
+    def __init__(self, name, result, ethnic, area):
         global idx
-        self.id += '{:02d}'.format(idx)
+        self.id = f'TS{idx:02d}'
         idx += 1
-        self.name = name
-        self.res = res
+        self.name = ' '.join(name.title().split())
         self.ethnic = ethnic
         self.area = area
-        self.total = res + priority(ethnic, area)
-        self.stat = 'Do' if self.total >= 20.5 else 'Truot'
+        self.result = result + self.calBonus()
+        self.stat = self.calStat()
 
-    def output(self):
-        print(f'{self.id} {self.name} {self.total:.1f} {self.stat}')
+    def calBonus(self):
+        res = 0
+        if self.area == 1:
+            res += 1.5
+        elif self.area == 2:
+            res += 1
+        else:
+            pass
+        if self.ethnic != 'Kinh':
+            res += 1.5
+        return res
+
+    def calStat(self):
+        bonus = self.calBonus()
+        res = self.result + bonus
+        if res < 20.5:
+            return 'Truot'
+        else:
+            return 'Do'
+
+    def __str__(self):
+        return f'{self.id} {self.name} {self.result} {self.stat}'
 
 
-def priority(ethnic, area):
-    ans = 0
-    if area == 1:
-        ans += 1.5
-    elif area == 2:
-        ans += 1.0
-    if ethnic != 'Kinh':
-        ans += 1.5
-    return ans
-
-
-def standard(s):
-    s = s.strip()
-    while '  ' in s:
-        s = s.replace('  ', ' ')
-    return s.title()
-
-
-n = int(input())
+t = int(input())
 lst = []
-while n > 0:
-    name = standard(input())
-    res = float(input())
+while t > 0:
+    name = input()
+    result = float(input())
     ethnic = input()
     area = int(input())
-    lst.append(Student(name, res, ethnic, area))
-    n -= 1
+    lst.append(Student(name, result, ethnic, area))
+    t -= 1
 
-lst = sorted(lst, key=lambda x: (-x.total, x.id))
+lst = sorted(lst, key=lambda x: (-x.result, x.id))
 for i in lst:
-    i.output()
-# 2
-# Nguyen  hong ngat
-# 22
-# Kinh
-# 1
-#   Chu thi MINh
-# 14
-# Dao
-# 3
+    print(i)
